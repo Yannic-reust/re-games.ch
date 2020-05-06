@@ -1,9 +1,21 @@
-body {
-    background-color: lightblue;
-  }
-  
-  h1 {
-    color: white;
-    text-align: center;
-  }
- 
+/*alg*/
+* {
+	margin: 0px;
+	padding: 0px;
+    box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    -msbox-sizing: border-box;
+    overflow-x: initial !important;
+    overflow-x: hidden;
+    
+}
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+}
+body{	
+    -webkit-overflow-scroll: touch;
+    background-color:#F5F4F3;
+    font-family: acumin-pro, sans-serif;
+    font-display: swap;
+    }
