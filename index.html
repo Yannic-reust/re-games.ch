@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <link rel="SHORTCUT ICON" href="/img/03-Logo/01-PNG/favicon-ocular.png" type="image/x-icon" />
+    <link rel="SHORTCUT ICON" href="/" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/hft4ebn.css">
 	
@@ -17,11 +17,12 @@
 </head>
 
 <body>
-    <div class="welcome">
+    <header>
         <h1>re-games.ch</h1>
-        <h2>Eine Koillektion der besten Retro Games</h2>
+        <h2>Kollektion der besten Retro Games</h2>
         <a href="#gamesmain">GAMES DURCHSTÖBERN</a>
-    </div>
+    </header>
+
 
     <div id="gamesmain">
         <div class="gamepreview">
@@ -60,5 +61,19 @@
       
         <p> &copy; 2020 re-games.ch</p>
     </footer>
+
+<script>	
+    //smooth scroll jquery
+    $('a[href^="#"]').on('click',function(e) {
+            e.preventDefault();
+            var target = this.hash;
+            var $target = $(target);
+            $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+            }, 700, 'swing', function () {
+            window.location.hash = target;
+            });
+        });
+    </script>
 </body>
 </html>
