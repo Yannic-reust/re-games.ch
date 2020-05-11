@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <link rel="SHORTCUT ICON" href="/img/03-Logo/01-PNG/favicon-ocular.png" type="image/x-icon" />
+    <link rel="SHORTCUT ICON" href="/" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/hft4ebn.css">
 	
@@ -17,19 +17,43 @@
 </head>
 
 <body>
-    <div class="welcome">
+    <header>
         <h1>re-games.ch</h1>
-        <h2>Eine Koillektion der besten Retro Games</h2>
+        <h2>Kollektion der besten Retro Games</h2>
         <a href="#gamesmain">GAMES DURCHSTÖBERN</a>
-    </div>
+    </header>
+
 
     <div id="gamesmain">
         <div class="gamepreview">
-            <img>
-            <h3>PAC MAN</h3>
+            <a href="games/2048-master/index.html">2048</a>
+            <img src="games/preview/2048.png" alt="2048" class="previewimg">
+            <p>Lorem Ipsum</p>
+        </div>
+        
+        <div class="gamepreview">
+            <a href="games/javascript-racer-master/index.html">Race-Master</a>
+            <img src="games/preview/race-master.PNG" alt="race-master" class="previewimg">
             <p>Lorem Ipsum</p>
         </div>
 
+        <div class="gamepreview">
+            <a href="games/clumsy-bird-master/index.html">Clumsy Bird</a>
+            <img src="games/preview/clumsy_bird.PNG" alt="Clumsy Bird" class="previewimg">
+            <p>Lorem Ipsum</p>
+        </div>
+
+        <div class="gamepreview">
+            <a href="games/mariohtml5-master/main.html">Infinit Mario</a>
+            <img src="games/preview/Mario.jpg" alt="Infinit Mario" class="previewimg">
+            <p>Lorem Ipsum</p>
+        </div>
+
+        <div class="gamepreview">
+            <a href="games/Achtung Kurve/index.html">Achtung Kurve</a>
+            <img src="games/preview/achtung_kurve.png" alt="achtung_kurve" class="previewimg">
+            <p>Lorem Ipsum</p>
+        </div> 
     </div>
 
 
@@ -37,5 +61,19 @@
       
         <p> &copy; 2020 re-games.ch</p>
     </footer>
+
+<script>	
+    //smooth scroll jquery
+    $('a[href^="#"]').on('click',function(e) {
+            e.preventDefault();
+            var target = this.hash;
+            var $target = $(target);
+            $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+            }, 700, 'swing', function () {
+            window.location.hash = target;
+            });
+        });
+    </script>
 </body>
 </html>
