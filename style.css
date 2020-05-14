@@ -53,20 +53,32 @@ header a{
 
 /*GAMES-PREV*/
 #gamesmain{
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
-    align-items: center;
+    padding: 4%;
     background-color: #E6BA52;
+}
+#gamesmain h1{
+    text-transform: uppercase;
+    font-family: bungee, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3rem;
+
+}
+.gamegrid{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 .gamepreview{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: left;
+    height: 100%;
     background-color: #f5f4f3;
-    margin: 1rem;
+    cursor: pointer;
+    padding: 1.5rem;
 }
 .gamepreview p{
     color: #141414;
@@ -74,20 +86,26 @@ header a{
 .gamepreview a{
     text-decoration: none;
     color: #52A6B0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 .previewimg{
-    width: 10rem;
-    padding: 0.5rem;
+    max-width: 14rem;
+    max-height: 14rem;
+}
+.gametext{
+    justify-content: center;
+    padding-left: 1rem;
+
 }
 
-.star-rating {
+.star-rating{
     display:flex;
     flex-direction: row-reverse;
-    font-size:1.5em;
+    font-size:1.5rem;
     justify-content:space-around;
-    padding:0 .2em;
+    padding:.2em;
+    top: 0rem;
     text-align:center;
     width:5em;
   }
@@ -95,5 +113,13 @@ header a{
     color: #52A6B0;
 }
 .star-inactive{
-    color: #f5f4f3;
+    color: #808080;
+}
+
+/*FOOTER*/
+footer{
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
