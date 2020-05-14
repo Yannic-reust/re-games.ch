@@ -53,26 +53,36 @@ header a{
 
 /*GAMES-PREV*/
 #gamesmain{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E6BA52;
+}
+.gamepreview{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: #f5f4f3;
+    margin: 1rem;
 }
-.gamepreview{
-    border-style: solid;
-    width: 200px;
-    height: 200px;
+.gamepreview p{
+    color: #141414;
 }
-.gamepreview{
-    border-style: solid;
-    width: 500px;
-    height: 500px;
-    
+.gamepreview a{
+    text-decoration: none;
+    color: #52A6B0;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .previewimg{
-    height:100px;
-     width:100px;
+    width: 10rem;
+    padding: 0.5rem;
 }
 
 .star-rating {
-
     display:flex;
     flex-direction: row-reverse;
     font-size:1.5em;
@@ -81,21 +91,9 @@ header a{
     text-align:center;
     width:5em;
   }
-  
-  .star-rating input {
-    display:none;
-  }
-  
-  .star-rating label {
-    color:#ccc;
-    cursor:pointer;
-  }
-  
-  .star-rating :checked ~ label {
-    color:#f90;
-  }
-  
-  .star-rating label:hover,
-  .star-rating label:hover ~ label {
-    color:#fc0;
-  }
+.star{
+    color: #52A6B0;
+}
+.star-inactive{
+    color: #f5f4f3;
+}
