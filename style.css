@@ -20,6 +20,8 @@ body{
     background-color: #3C6784;
     color: #f5f4f3;
 }
+
+/*HEADER*/
 header{
     display: flex;
     height: 100vh;
@@ -49,11 +51,14 @@ header a{
     margin-top: 5rem;
 }
 
+/*GAMES-PREV*/
+#gamesmain{
+    display: flex;
+}
 .gamepreview{
     border-style: solid;
     width: 200px;
     height: 200px;
-    
 }
 .previewimg{
     height:100px;
