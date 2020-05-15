@@ -16,7 +16,7 @@
 <title>Re-games</title>
 </head>
 
-<body>
+<body  onload="getcomments()">
     <header>
         <h1>re-games.ch</h1>
         <h2>Kollektion der besten Retro Games</h2>
@@ -133,6 +133,15 @@
         </form>
     </section>
 
+    <section>
+        <div>
+            <p> <span id="myText"></span></p>
+        </div>
+
+
+    </section>
+
+
     <footer>
         <p> &copy; 2020 re-games.ch</p>
     </footer>
@@ -191,7 +200,32 @@
         
     };
     
-   
+    function getcomments() {
+
+    var ref = firebase.database().ref();
+        ref.on("value", function(snapshot) {
+        console.log(snapshot.val());
+
+
+var myText = document.getElementById(myText)
+        firebasemyTextRef = firebase.database().ref().child("Username");
+        myText.innerText = databasesnapshot.val()
+        
+
+      
+
+
+
+     
+
+
+
+},);
+    
+
+       
+     
+    }
 
 </script>
 
