@@ -126,9 +126,11 @@
     </div> 
     </section>
     <section class="comments" >
-        <input type="text" placeholder="Name" name="name">
-        <textarea placeholder="Kommentar..." name="comment"></textarea>
-        <button name="submit">Senden</button>
+        <form>
+            <input type="text" placeholder="Name" id="name">
+            <textarea placeholder="Kommentar..." id="comment"></textarea>
+            <button type="submit" name="submitOrder" onclick="submitPost()">Senden</button>
+        </form>
     </section>
 
     <footer>
@@ -152,6 +154,48 @@
     window.location = $(this).find("a").attr("href"); 
     return false;
   });</script>
+
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+
+<script>
+
+    var config = {
+        apiKey: "AIzaSyDLF-EVwUYGH27dL1tt99MOjpvN1V3Yoak",
+    authDomain: "re-games.firebaseapp.com",
+    databaseURL: "https://re-games.firebaseio.com",
+    projectId: "re-games",
+    storageBucket: "re-games.appspot.com",
+    messagingSenderId: "424838405088",
+    appId: "1:424838405088:web:90c8af5efc8f579f0fe985"
+    };
+    
+
+    firebase.initializeApp(config);
+    var database = firebase.database();
+
+    var firebaseOrdersCollection = database.ref().child('post');
+
+    function submitPost() {
+
+        var comment = document.getElementById("comment").value;
+        var name = document.getElementById("name").value;
+
+        var post = {
+            Username: $('#name').val(),
+            comment: $('#comment').val(), 
+            
+        };
+        
+        
+        firebaseOrdersCollection.push(post);
+        
+    };
+    
+   
+
+</script>
+
+
 
 </body>
 </html>
