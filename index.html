@@ -16,7 +16,7 @@
 <title>Re-games</title>
 </head>
 
-<body  onload="getcomments()">
+<body>
     <header>
         <h1>re-games.ch</h1>
         <h2>Kollektion der besten Retro Games</h2>
@@ -134,8 +134,8 @@
     </section>
 
     <section>
-        <div>
-            <p> <span id="myText"></span></p>
+        <div id="output_p">
+            
         </div>
 
 
@@ -168,6 +168,7 @@
 
 <script>
 
+    // install firebase project
     var config = {
         apiKey: "AIzaSyDLF-EVwUYGH27dL1tt99MOjpvN1V3Yoak",
     authDomain: "re-games.firebaseapp.com",
@@ -178,54 +179,78 @@
     appId: "1:424838405088:web:90c8af5efc8f579f0fe985"
     };
     
-
     firebase.initializeApp(config);
     var database = firebase.database();
-
     var firebaseOrdersCollection = database.ref().child('post');
 
+    // push data to firebase
     function submitPost() {
-
         var comment = document.getElementById("comment").value;
         var name = document.getElementById("name").value;
-
         var post = {
             Username: $('#name').val(),
-            comment: $('#comment').val(), 
-            
+            comment: $('#comment').val(),   
         };
-        
-        
         firebaseOrdersCollection.push(post);
-        
     };
     
-    function getcomments() {
-
-    var ref = firebase.database().ref();
-        ref.on("value", function(snapshot) {
-        console.log(snapshot.val());
-
-
-var myText = document.getElementById(myText)
-        firebasemyTextRef = firebase.database().ref().child("Username");
-        myText.innerText = databasesnapshot.val()
-        
-
-      
-
-
-
-     
-
-
-
-},);
-    
-
+    // get data from firebase
+    firebaseOrdersCollection.on("value", function(snapshot){
+        snapshot.forEach(function(childsnapshot){
+            var data = childsnapshot.val();
+            var comment = Object.entries(data)
+            console.log(comment)
+            document.getElementById("output_p").innerHTML = comment;
+        // output data to html
+        var outputHTML = ''
        
-     
-    }
+            
+            var comments = Object.values(data)
+            for(var i = 0; i < 5; i++){
+                outputHTML +=  "<p>" + comments[i] + "</p>" 
+            }
+            // document.getElementById("output_p").innerHTML = outputHTML;
+
+    
+        })
+
+
+   })
+
+   
+
+
+
+
+
+
+
+
+
+    // var ref = database.ref()
+    // ref.on('value', gotdata)
+    
+    // function gotdata(data){
+    //     var comments = data.val();
+    //     var keys = Object.keys(comments);
+        
+    //     for(var i = 0; i < keys.length; i++){
+    //         var k = keys[i];
+    //         var initials = comments[k].initials;
+    //         var comment = comments[k].comment;
+    //         console.log(initials, comment)
+    //     }
+        
+        
+    //     }
+
+  
+
+
+// var myText = document.getElementById(myText)
+//         firebasemyTextRef = firebase.database().ref().child("Username");
+//         myText.innerText = databasesnapshot.val()
+        
 
 </script>
 
