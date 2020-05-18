@@ -1,0 +1,17 @@
+body{
+    background-color: #3C6784;
+    display: flex;
+    justify-content: center;
+   
+}
+.content{
+    background-color: #E6BA52;
+    width: 70%;
+    padding: 5%;
+    margin-top: 10%;
+    color: white;
+}
+.content a{
+    color:white;
+    text-decoration: none;
+}
