@@ -39,3 +39,16 @@ body{
   .star-rating label:hover ~ label {
     color: #52A6B0;
   }
+
+  .back-main{
+    position: absolute;
+    left:10px;
+    top:5px;
+  
+  }
+  .back-main a{
+    color: #faf8ef;
+    text-decoration: none;
+    font-family: acumin-pro, sans-serif;
+  }
+  
