@@ -27,3 +27,15 @@ li a{
     font-size: 2rem;
     margin-left: 25%;
 }
+.back-main{
+    position: absolute;
+    left:10px;
+    top:5px;
+  
+  }
+  .back-main a{
+    color: #faf8ef;
+    text-decoration: none;
+    font-family: bungee, sans-serif;
+  }
+  

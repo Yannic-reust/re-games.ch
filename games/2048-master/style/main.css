@@ -12,6 +12,17 @@ html, body {
   align-items: center;
 }
 
+.back-main{
+  position: absolute;
+  left:10px;
+  top:5px;
+
+}
+.back-main a{
+  color: #faf8ef;
+  text-decoration: none;
+}
+
 
 .main-content{
   width: 120%;
