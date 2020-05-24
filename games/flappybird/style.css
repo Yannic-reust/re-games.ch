@@ -6,7 +6,7 @@ body{
     background-color: #3C6784;
     justify-content: center;
     display: flex;
-}
+}S
 .main-content{
   background-color: #E6BA52;
   width: 43.5%;
@@ -29,7 +29,7 @@ body{
 .back-main a{
   color: #faf8ef;
   text-decoration: none;
-  font-family: acumin-pro, sans-serif;
+  font-family: bungee, sans-serif;
 }
 
 .bewertung{

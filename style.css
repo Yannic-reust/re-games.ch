@@ -144,7 +144,7 @@ input{
     margin-bottom: 1rem;
 }
 textarea{
-    width: 40rem;
+    width: 100%;
     height: 10rem;
 }
 input, textarea{
@@ -152,10 +152,16 @@ input, textarea{
     padding: 0.5rem;
 
 }
-
+.comment-output{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
 .comment-article{
     background-color: #E6BA52;
-    width: 50%;
+    border: solid #f5f4f3;
+    width: 80%;
+    height: 10rem;
 }
 
 /*FOOTER*/
