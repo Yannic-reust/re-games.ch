@@ -69,10 +69,10 @@
         </article>
 
         <article class="gamepreview">
-            <img src="games/preview/clumsy_bird.PNG" alt="Clumsy Bird" class="previewimg">
+            <img src="games/preview/clumsy_bird.PNG" alt="Flappy Bird" class="previewimg">
 
             <div class="gametext">
-            <a href="games/clumsy-bird-master/index.html">Clumsy Bird</a>
+            <a href="games/flappybird/index.html">Floppy Bird</a>
             <p>2048 ist ein unterhaltsames Spiel, bei dem Zahlen miteinander kombiniert werden müssen, 
                 bis irgendwann die Zahl 2048 auf dem Screen erscheint. 
                 Die Zahlen erscheinen auf einem Raster mit 16 Feldern 
@@ -126,6 +126,7 @@
         </article>
     </div> 
     </section>
+<<<<<<< HEAD
 
     <!--KOMMENTARE-->
     <section class="comments">
@@ -138,7 +139,24 @@
         <article class="comment-article">
 
         </article>
+=======
+    <section class="comments" >
+        <form>
+            <input type="text" placeholder="Name" id="name">
+            <textarea placeholder="Kommentar..." id="comment"></textarea>
+            <button type="submit" name="submitOrder" onclick="submitPost()">Senden</button>
+        </form>
+>>>>>>> 0a736e9bc726251220b35dcf011fc92bd1467eb9
     </section>
+
+    <section>
+        <div id="output_p">
+            
+        </div>
+
+
+    </section>
+
 
     <footer>
         <p> &copy; 2020 re-games.ch</p>
@@ -161,6 +179,98 @@
     window.location = $(this).find("a").attr("href"); 
     return false;
   });</script>
+
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+
+<script>
+
+    // install firebase project
+    var config = {
+        apiKey: "AIzaSyDLF-EVwUYGH27dL1tt99MOjpvN1V3Yoak",
+    authDomain: "re-games.firebaseapp.com",
+    databaseURL: "https://re-games.firebaseio.com",
+    projectId: "re-games",
+    storageBucket: "re-games.appspot.com",
+    messagingSenderId: "424838405088",
+    appId: "1:424838405088:web:90c8af5efc8f579f0fe985"
+    };
+    
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    var firebaseOrdersCollection = database.ref().child('post');
+
+    // push data to firebase
+    function submitPost() {
+        var comment = document.getElementById("comment").value;
+        var name = document.getElementById("name").value;
+        var post = {
+            Username: $('#name').val(),
+            comment: $('#comment').val(),   
+        };
+        firebaseOrdersCollection.push(post);
+    };
+    
+    // get data from firebase
+    firebaseOrdersCollection.on("value", function(snapshot){
+        snapshot.forEach(function(childsnapshot){
+            var data = childsnapshot.val();
+            var comment = Object.entries(data)
+            console.log(comment)
+            document.getElementById("output_p").innerHTML = comment;
+        // output data to html
+        var outputHTML = ''
+       
+            
+            var comments = Object.values(data)
+            for(var i = 0; i < 5; i++){
+                outputHTML +=  "<p>" + comments[i] + "</p>" 
+            }
+            // document.getElementById("output_p").innerHTML = outputHTML;
+
+    
+        })
+
+
+   })
+
+   
+
+
+
+
+
+
+
+
+
+    // var ref = database.ref()
+    // ref.on('value', gotdata)
+    
+    // function gotdata(data){
+    //     var comments = data.val();
+    //     var keys = Object.keys(comments);
+        
+    //     for(var i = 0; i < keys.length; i++){
+    //         var k = keys[i];
+    //         var initials = comments[k].initials;
+    //         var comment = comments[k].comment;
+    //         console.log(initials, comment)
+    //     }
+        
+        
+    //     }
+
+  
+
+
+// var myText = document.getElementById(myText)
+//         firebasemyTextRef = firebase.database().ref().child("Username");
+//         myText.innerText = databasesnapshot.val()
+        
+
+</script>
+
+
 
 </body>
 </html>

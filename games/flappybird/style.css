@@ -1,0 +1,78 @@
+html, body {
+  margin: 0;
+  padding: 0;}
+
+body{
+    background-color: #3C6784;
+    justify-content: center;
+    display: flex;
+}
+.main-content{
+  background-color: #E6BA52;
+  width: 43.5%;
+  justify-content: center;
+  display: flex;
+  height: 50vh;
+  padding: 5%;
+  padding-bottom: 15%;
+  margin-top: 10%;
+
+}
+
+
+.back-main{
+  position: absolute;
+  left:10px;
+  top:5px;
+
+}
+.back-main a{
+  color: #faf8ef;
+  text-decoration: none;
+  font-family: acumin-pro, sans-serif;
+}
+
+.bewertung{
+  position: absolute;
+  left:25%;
+  top: 65%;
+  font-family: acumin-pro, sans-serif;
+  color:white;
+}
+.star-rating {
+    display:flex;
+    flex-direction: row-reverse;
+    font-size:1.5em;
+    justify-content:space-around;
+    padding:0 .2em;
+    text-align:center;
+    width:5em;
+  }
+  
+  .star-rating input {
+    display:none;
+  }
+  
+  .star-rating label {
+    color: #808080;
+    cursor:pointer;
+  }
+  
+  .star-rating :checked ~ label {
+    color: #52A6B0;
+  }
+  
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: #52A6B0;
+  }
+  
+
+  #div1 {
+    font-size:48px; }
+    
+       h1{  text-shadow:5px 5px 5px  #dfd2ec ; text-align:center;}
+      
+       @keyframes mymove {
+      50% {box-shadow: 10px 20px 30px blue;} }
+       h3{ font-family:'Permanent Marker'; }
