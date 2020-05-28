@@ -7,6 +7,9 @@ main{background:black url("../resources/kurve-splash.png");
     padding-top:288px;
     position:relative;
     text-align:center;
+    margin-top: 10%;
+    height: 35vh;
+    width: 50%; 
     width:640px}
 #wrapper p{margin:0 0 1em 0}
 #start-hint{font-size:1.2em}
@@ -15,15 +18,13 @@ main{background:black url("../resources/kurve-splash.png");
 #preload{display:none}
 
 #wrapper{
-    width: 80%;
     background-color: #E6BA52;
-    padding-top: 10%; 
-    padding-bottom: 20%; 
- 
+    padding-top: 5%; 
+    padding-bottom: 15%; 
+    padding-left: 6%;
+    padding-right: 6%;
     display: flex;
     justify-content: center;
-   
-
 }
 
 .back-main{
@@ -35,12 +36,13 @@ main{background:black url("../resources/kurve-splash.png");
   .back-main a{
     color: #faf8ef;
     text-decoration: none;
+    font-family: bungee, sans-serif;
   }
 
 .bewertung{
     position: absolute;
-    margin-top: 30%;
-    left:20%
+    margin-top: 28%;
+    left:15%
 }
 
 
