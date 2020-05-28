@@ -17,13 +17,14 @@
 </head>
 
 <body>
+    <!--HEADER-->
     <header>
         <h1>re-games.ch</h1>
         <h2>Kollektion der besten Retro Games</h2>
         <a href="#gamesmain">GAMES DURCHSTÖBERN</a>
     </header>
 
-
+<!--GAMES-->
     <section id="gamesmain">
         <h1>alle unsere games</h1>
 
@@ -125,21 +126,25 @@
         </article>
     </div> 
     </section>
+
+    <!--KOMMENTARE-->
     <section class="comments" >
+        <article class="comment-input">
+            <h1>KOMMENTARE</h1>
         <form>
-            <input type="text" placeholder="Name" id="name">
+            <input type="text" placeholder="Anzeigename"id="name">
             <textarea placeholder="Kommentar..." id="comment"></textarea>
             <button type="submit" name="submitOrder" onclick="submitPost()">Senden</button>
-        </form>
-    </section>
+        </form></article>
 
-    <section>
-        <div id="output_p">
+    
+
+    <article class="comment-output">
+        <div id="output_p" class="comment-article">
             
         </div>
-
-
-    </section>
+    </article>
+</section>
 
 
     <footer>
@@ -216,16 +221,6 @@
 
 
    })
-
-   
-
-
-
-
-
-
-
-
 
     // var ref = database.ref()
     // ref.on('value', gotdata)

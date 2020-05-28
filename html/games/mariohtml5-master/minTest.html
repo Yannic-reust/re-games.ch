@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Infinite Mario - JavaScript</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div class="back-main">
+			<a href="../../index.html">Zurück zur Hauptseite</a>
+		  </div>
+		<div class="content">
+			
+				<canvas id="canvas" width="640" height="480">
+					<p>Your browser does not support the canvas element.</p>
+				</canvas>
+			
+				<p>Das Spiel Bewerten:</p>
+    <div class="star-rating">
+      <input type="radio" id="5-stars" name="rating" value="5" />
+      <label for="5-stars" class="star">&#9733;</label>
+      <input type="radio" id="4-stars" name="rating" value="4" />
+      <label for="4-stars" class="star">&#9733;</label>
+      <input type="radio" id="3-stars" name="rating" value="3" />
+      <label for="3-stars" class="star">&#9733;</label>
+      <input type="radio" id="2-stars" name="rating" value="2" />
+      <label for="2-stars" class="star">&#9733;</label>
+      <input type="radio" id="1-star" name="rating" value="1" />
+      <label for="1-star" class="star">&#9733;</label>
+     
+    </div>
+    <button type="submit" onclick="submit()">Senden</button>
+		</div>
+		
+		<script>
+			function submit(){
+			  alert('Danke für deine Bewertung')
+			}
+		  </script>
+        
+		<script src="enjine.min.js"></script>
+		<script src="mario.min.js"></script>
+        <script>$(document).ready(function() { new Enjine.Application().Initialize(new Mario.LoadingState(), 320, 240) });</script>
+	</body>
+</html>

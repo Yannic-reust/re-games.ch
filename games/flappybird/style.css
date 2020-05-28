@@ -11,8 +11,10 @@ body{
   background-color: #E6BA52;
   width: 43.5%;
   justify-content: center;
+  align-items: center;
   display: flex;
-  height: 50vh;
+  flex-direction: column;
+  height: 30vh;
   padding: 5%;
   padding-bottom: 15%;
   margin-top: 10%;
@@ -29,13 +31,11 @@ body{
 .back-main a{
   color: #faf8ef;
   text-decoration: none;
-  font-family: acumin-pro, sans-serif;
+  font-family: bungee, sans-serif;
 }
 
 .bewertung{
-  position: absolute;
-  left:25%;
-  top: 65%;
+  left: 0px;
   font-family: acumin-pro, sans-serif;
   color:white;
 }
@@ -66,7 +66,10 @@ body{
   .star-rating label:hover ~ label {
     color: #52A6B0;
   }
-  
+  #myCanvas{
+    width: 320px;
+    height: 480px;
+  }
 
   #div1 {
     font-size:48px; }
