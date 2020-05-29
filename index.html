@@ -54,10 +54,9 @@
 
             <div class="gametext">
             <a href="games/javascript-racer-master/index.html">Race-Master</a>
-            <p>2048 ist ein unterhaltsames Spiel, bei dem Zahlen miteinander kombiniert werden müssen, 
-                bis irgendwann die Zahl 2048 auf dem Screen erscheint. 
-                Die Zahlen erscheinen auf einem Raster mit 16 Feldern 
-                und können nur mit der gleichen Zahl kombiniert werden: 2+2, 4+4, 8+8, 16+16 (…)</p></div>
+            <p>Dieses Spiel ist ein einfach programmiertes Car racing Game. Es besteht aus 4 Leveln. Die 
+                verschieden Einstellungen lassen das Spiel sehr gut einstellen.
+            </p></div>
 
             <div class="star-rating">
                 <label for="5-stars" class="star-inactive">&#9733;</label>
@@ -73,10 +72,7 @@
 
             <div class="gametext">
             <a href="games/flappybird/index.html">Floppy Bird</a>
-            <p>2048 ist ein unterhaltsames Spiel, bei dem Zahlen miteinander kombiniert werden müssen, 
-                bis irgendwann die Zahl 2048 auf dem Screen erscheint. 
-                Die Zahlen erscheinen auf einem Raster mit 16 Feldern 
-                und können nur mit der gleichen Zahl kombiniert werden: 2+2, 4+4, 8+8, 16+16 (…)</p></div>
+            <p>Die grafische Gestaltung von Flappy Bird ähnelt der Grafik von Super Mario World und ist vergleichsweise einfach gehalten. </p></div>
 
             <div class="star-rating">
                 <label for="5-stars" class="star-inactive">&#9733;</label>
@@ -92,10 +88,7 @@
 
         <div class="gametext">
         <a href="games/mariohtml5-master/minTest.html">Infinit Mario</a>
-            <p>2048 ist ein unterhaltsames Spiel, bei dem Zahlen miteinander kombiniert werden müssen, 
-                bis irgendwann die Zahl 2048 auf dem Screen erscheint. 
-                Die Zahlen erscheinen auf einem Raster mit 16 Feldern 
-                und können nur mit der gleichen Zahl kombiniert werden: 2+2, 4+4, 8+8, 16+16 (…)</p></div>
+            <p>Eines Tages wurde das Pilzkönigreich von den Koopa besetzt, einem Stamm von Schildkröten, die mächtige dunkle Magie einsetzen können. Ihre Magie wurde verwendet, um alle Bewohner des Königreiches in leblose Objekte wie Steine, Ziegel und sogar Rosshaar zu verwandeln und so den Untergang des Königreichs zu verdeutlichen.</p></div>
 
             <div class="star-rating">
                 <label for="5-stars" class="star">&#9733;</label>
@@ -111,10 +104,7 @@
 
             <div class="gametext">
             <a href="games/Achtung Kurve/index.html">Achtung Kurve</a>
-            <p>2048 ist ein unterhaltsames Spiel, bei dem Zahlen miteinander kombiniert werden müssen, 
-                bis irgendwann die Zahl 2048 auf dem Screen erscheint. 
-                Die Zahlen erscheinen auf einem Raster mit 16 Feldern 
-                und können nur mit der gleichen Zahl kombiniert werden: 2+2, 4+4, 8+8, 16+16 (…)</p></div>
+            <p>Die Spielereinheiten erscheinen an zufälligen Orten auf der Karte und bewegen sich mit einer konstanten Geschwindigkeit bis sie zusammenstoßen bzw. gewinnen. Durch geschicktes Steuern kann man den Gegenspielern Raum wegnehmen und sie so zu Fehlern zwingen.</p></div>
 
             <div class="star-rating">
                 <label for="5-stars" class="star-inactive">&#9733;</label>
@@ -203,7 +193,7 @@
     firebaseOrdersCollection.on("value", function(snapshot){
         snapshot.forEach(function(childsnapshot){
             var data = childsnapshot.val();
-            var comment = Object.entries(data)
+            var comment = Object.values(data)
             
             document.getElementById("output_p").innerHTML = comment;
         // output data to html
@@ -212,7 +202,7 @@
             
             var comments = Object.values(data)
             for(var i = 0; i < 5; i++){
-                outputHTML +=  "<p>" + comments[i] + "</p>" 
+                outputHTML +=  "<p>" + comments[i] + " "+ "</p>" 
             }
             // document.getElementById("output_p").innerHTML = outputHTML;
 
