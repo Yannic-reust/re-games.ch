@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/hft4ebn.css">
 	
-    <link rel="ICON" href="img/03-Logo/01-PNG/favicon-ocular.png" type="image/ico" />
+    <link rel="ICON" href="logo.png" type="image/ico" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -204,7 +204,7 @@
         snapshot.forEach(function(childsnapshot){
             var data = childsnapshot.val();
             var comment = Object.entries(data)
-            console.log(comment)
+            
             document.getElementById("output_p").innerHTML = comment;
         // output data to html
         var outputHTML = ''
@@ -221,31 +221,7 @@
 
 
    })
-
-    // var ref = database.ref()
-    // ref.on('value', gotdata)
-    
-    // function gotdata(data){
-    //     var comments = data.val();
-    //     var keys = Object.keys(comments);
-        
-    //     for(var i = 0; i < keys.length; i++){
-    //         var k = keys[i];
-    //         var initials = comments[k].initials;
-    //         var comment = comments[k].comment;
-    //         console.log(initials, comment)
-    //     }
-        
-        
-    //     }
-
-  
-
-
-// var myText = document.getElementById(myText)
-//         firebasemyTextRef = firebase.database().ref().child("Username");
-//         myText.innerText = databasesnapshot.val()
-        
+   
 
 </script>
 
